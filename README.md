@@ -30,13 +30,41 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+Both .forEach and .map run a function on every item in the array you are calling them on, but .forEach just runs the function, and .map creates a new array with the results of running that function on each item.
+
 2. What is the difference between a function and a method?
+
+
+A function is something you define that is separate from anything else, which you can call wherever you want.
+A method is basically a function that belongs to a certain object and you define methods on the prototype of an object.
+
 
 3. What is closure?
 
+
+A closure is when you give an inner element of a function access to the outer function's scope. This is created when you write a function inside of a function, the inner function has access to the outer function's scope, but the outer doesn't have access to the inner function's scope.
+
+
 4. Describe the four rules of the 'this' keyword.
 
+
+1) Window Binding - This is when none of the other rules are met, the 'this' keyword defaults to the window or global object.
+
+2) Implicit Binding - This is the most used principle and it means that whenever you call a method on an object, the 'this' keyword refers to the object that would be on the left of the dot in a function.
+
+3) New Binding - This is when using an object constructor or class, the 'this' keyword represents the new object being created.
+
+4) Explicit Binding - Explicit binding is when you clearly state what the 'this' keyword is representing.
+	1) .call - .call allows you to immediately invoke a function, passing in arguments 1 by 1.
+	2) .apply - .apply allows you to also immediately invoke a function, but passing in arrays.
+	3) .bind - .bind doesn't immediately invoke a function, but instead assigns a variable to a function, that you can use later, also taking arguments 1 by 1.
+
+
 5. Why do we need super() in an extended class?
+
+
+The super() represents the attributes in the constructor of the class that the new class is extending. This makes it so when you want to have a class inherit from another, the inherited class can have all of the attributes of the parent class.
+
 
 ## Project Set up
 
@@ -65,11 +93,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
